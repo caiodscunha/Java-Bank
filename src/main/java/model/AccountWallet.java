@@ -1,9 +1,12 @@
 package model;
 
+import lombok.Getter;
+
 import java.util.List;
 
 import static model.BankService.ACCOUNT;
 
+@Getter
 public class AccountWallet extends Wallet{
 
     private final List<String> pix;
