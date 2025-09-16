@@ -4,7 +4,7 @@ import java.time.OffsetDateTime;
 import java.util.UUID;
 
 public record MoneyAudit(
-        UUID transactionID,
+        UUID transactionId,
         BankService targetService,
         String description,
         OffsetDateTime createdAt
