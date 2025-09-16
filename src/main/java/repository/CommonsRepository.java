@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import model.AccountWallet;
 import model.Money;
 import model.MoneyAudit;
+import model.Wallet;
 
 import java.time.OffsetDateTime;
 import java.util.List;
@@ -18,7 +19,7 @@ import static model.BankService.ACCOUNT;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class CommonsRepository {
 
-    public static void checkFundsForTransaction(final AccountWallet source, final long ammount){
+    public static void checkFundsForTransaction(final Wallet source, final long ammount){
         if(source.getFunds() < ammount) throw new NoFundsEnoughException("Sua conta não tem fundos suficientes para realizar essa transação");
 
     }
